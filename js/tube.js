@@ -6,7 +6,7 @@ const loadAllTubeItems = async () => {
     console.log(data.data);
 
     const catchTabContainer = document.getElementById('tab-container');
-    data.data.slice(0, 4).forEach((category) => {
+    data.data.forEach((category) => {
         const div = document.createElement('div');
         div.innerHTML = `
         <a onclick="handleTubeTab('${category.category_id}')" class="tab bg-gray-200 container mx-auto rounded-md m-4">${category.category}</a> 
@@ -89,6 +89,8 @@ const handleTubeTab = async (category_id) => {
 
 
 loadAllTubeItems();
+
+handleTubeTab('1000');
 
 
 
