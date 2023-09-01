@@ -39,8 +39,8 @@ const handleTubeTab = async (category_id) => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card bg-base-100 shadow-xl">
-        <figure class=" h-48 w-64 " ><img src="${tube?.thumbnail}" alt="Shoes" /></figure>
+        <div class="card bg-base-100 m-4 rounded-lg shadow-xl">
+        <figure class=" h-40 w-full rounded-lg" ><img src="${tube?.thumbnail}" alt="Shoes" /></figure>
 
         <div class="card-body">
 
