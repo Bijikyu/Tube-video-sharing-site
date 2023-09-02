@@ -5,7 +5,10 @@ const loadAllTubeItems = async () => {
     const data = await allVideos.json();
     console.log(data.data);
 
+    // loading all 4 tab or button sections. taking elements from API
     const catchTabContainer = document.getElementById('tab-container');
+
+    // creating div and appending all 4 tab in that div.
     data.data.forEach((category) => {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -19,7 +22,7 @@ const loadAllTubeItems = async () => {
 
 };
 
-
+// showing all card in client's side by calling function handleTubeTab.
 const handleTubeTab = async (category_id) => {
 
     const res = await fetch(`
@@ -32,15 +35,27 @@ const handleTubeTab = async (category_id) => {
     const dynamicCardAppendContainer = document.getElementById('dynamic-card-append-container');
 
     dynamicCardAppendContainer.innerHTML = "";
+   
 
     // Creating div by forEach for dynamicCardAppendContainer
 
     data?.data?.forEach((tube) => {
+      const seconds = (tube.others.posted_date)
+      console.log(seconds)
+      const hours = Math.floor(seconds/3600);
+      const mins = Math.floor((seconds % 3600) / 60);
+      // let hrs=time/3600;
+      // hrs=Math.floor(hrs);
+    
+      // let remainingHrs = time%3600;
+      // let mins = remainingHrs*60;
+      // mins = Math.floor(mins);
 
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card bg-base-100 m-4 rounded-lg shadow-xl">
+        <div class="card relative bg-base-100 m-4 rounded-lg shadow-xl">
         <figure class=" h-40 w-full rounded-lg" ><img src="${tube?.thumbnail}" alt="Shoes" /></figure>
+        <p id = "posted-time" class="absolute bg-black bottom-40 left-64 text-white font-medium text-sm ">${hours} hrs ${mins} mins ago</p>
 
         <div class="card-body">
 
@@ -74,9 +89,15 @@ const handleTubeTab = async (category_id) => {
     
     `;
 
+    if( seconds === ''){
+      div.querySelector('#posted-time').style.display = 'none';
+    }
+
         // Appending card in container for showing in display for user
 
         dynamicCardAppendContainer.appendChild(div);
+
+        
 
     }
     );
@@ -89,8 +110,27 @@ const handleTubeTab = async (category_id) => {
 
 // function for no data available for Drawing.
 
-const noDataAvailableDrawing = () =>{
+// const time = () =>{
+//   let hrs=time/3600;
+//   hrs=Math.floor(hrs);
 
+//   let remainingHrs = time%3600;
+//   let mins = remainingHrs*60;
+//   mins = Math.floor(mins);
+// }
+
+const noDataAvailableDrawing = (category_id) =>{
+  
+  if (onclick="handleTubeTab('${category.category_id}')" ==='1005'){
+    const drawingTab = document.getElementById('drawing-tab-showing');
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <img src="./Icon" alt="">
+    <p>Sorry!! No data available.</p>
+    `;
+    drawingTab.appendChild(div);
+    console.log(category_id);
+  }
 }
 
 const blog = () =>{
@@ -102,6 +142,8 @@ const blog = () =>{
 loadAllTubeItems();
 
 handleTubeTab('1000');
+
+noDataAvailableDrawing();
 
 
 
