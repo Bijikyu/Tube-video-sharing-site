@@ -87,6 +87,17 @@ const handleTubeTab = async (category_id) => {
 
 }
 
+// function for no data available for Drawing.
+
+const noDataAvailableDrawing = () =>{
+
+}
+
+const blog = () =>{
+  // window.open('http://127.0.0.1:5500/js/blog.html');
+  window.location.href = './js/blog.html';
+}
+
 
 loadAllTubeItems();
 
