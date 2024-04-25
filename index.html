@@ -1,108 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- This HTML file defines the structure and presentation of a web page for a platform named "PH Tube". It includes references to external CSS frameworks like DaisyUI and TailwindCSS for styling, and a JavaScript file for functionality. -->
+
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Starts an HTML document and specifies the language as English -->
 
 <!-- Head part of html -->
+<head> <!-- Contains meta-information about the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to ensure the site is responsive -->
+    <title>PH Tube</title> <!-- Sets the title of the document to be displayed in the browser's title bar or tab -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PH Tube</title>
-
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" /> <!-- Links to DaisyUI CSS framework for styling -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Includes TailwindCSS framework for utility-first CSS styling -->
 
 </head>
 
 <!-- body part of html -->
+<body> <!-- Contains the content of an HTML document -->
 
-<body>
-
-    <header class="container mx-auto">
-        <section class="flex justify-between items-center container mx-auto m-6">
-            <div class="lg:w-auto w-24">
-                <img src="./Logo.png" alt="">
+    <header class="container mx-auto"> <!-- Defines a header for the document and centers it using TailwindCSS classes -->
+        <section class="flex justify-between items-center container mx-auto m-6"> <!-- Creates a section with a flexible layout and margins -->
+            <div class="lg:w-auto w-24"> <!-- Defines a div for the logo with responsive width -->
+                <img src="./Logo.png" alt=""> <!-- Embeds an image (logo) with a relative path -->
             </div>
-            <div class="">
-                <button class="">
-                    <h2 class="text-xl font-medium p-2 lg:pl-5 lg:pr-5 lg:mr-20 bg-[#25252533] rounded-md">Sort by view</h2>
+            <div class=""> <!-- Container for the sort button -->
+                <button class=""> <!-- Defines a clickable button -->
+                    <h2 class="text-xl font-medium p-2 lg:pl-5 lg:pr-5 lg:mr-20 bg-[#25252533] rounded-md">Sort by view</h2> <!-- Button text with styling -->
                 </button>
             </div>
-            <div class="bg-[#FF1F3D] text-white lg:pr-5 lg:pl-5 p-2 rounded-md">
-                <button onclick="blog()">
-                    <p class="text-xl font-medium">Blog</p>
+            <div class="bg-[#FF1F3D] text-white lg:pr-5 lg:pl-5 p-2 rounded-md"> <!-- Container for the blog button with background color and padding -->
+                <button onclick="blog()"> <!-- Button with an onclick event to call the blog function -->
+                    <p class="text-xl font-medium">Blog</p> <!-- Button text with styling -->
                 </button>
             </div>
         </section>
 
-        <hr class="border-2">
+        <hr class="border-2"> <!-- Horizontal rule with increased border size -->
 
     </header>
 
-    <main class="container mx-auto">
-        <div class="tab-container w-full">
-            <div id="tab-container" class="tabs flex gap-4 p-4 justify-center m-auto">
-                <!-- <a class="tab bg-gray-200 rounded-md m-4">Tab 1</a> 
-                <a class="tab tab-active bg-gray-200 rounded-md m-4">Tab 2</a> 
-                <a class="tab bg-gray-200 rounded-md m-4">Tab 3</a>
-                <a class="tab bg-gray-200 rounded-md m-4">Tab 4</a> -->
+    <main class="container mx-auto"> <!-- Main content area of the document -->
+        <div class="tab-container w-full"> <!-- Container for tabs with full width -->
+            <div id="tab-container" class="tabs flex gap-4 p-4 justify-center m-auto"> <!-- Container for individual tabs with styling and centering -->
+                <!-- Tabs will be dynamically inserted here -->
             </div>
         </div>
 
-        <!-- <hr class="border-2"> -->
-
-        <!-- showing card for all card. html code is here -->
-
+        <!-- Section for dynamically displaying cards -->
         <section>
-            <div id="dynamic-card-append-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div id="dynamic-card-append-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"> <!-- Grid container for cards with responsive column layout -->
          
             </div>
         </section>
 
-        <!-- daisy ui card comment -->
-        <!-- <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-
-            <div class="card-body">
-
-                <div>
-                    <img src="./Logo.png" alt="">
-                    <p>a</p>
-                    <p class="card-title">
-                        <img src="./Icon.png" alt=""> building a winning UX Strategy
-                    </p>
-                </div>
-
-                <h2 class="">
-                    Awlad hossain
-                    <div class="badge badge-xs rounded-full badge-primary">a</div>
-                </h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <div class="badge badge-outline">Fashion</div>
-                    <div class="badge badge-outline">Products</div>
-                </div>
-                show views
-                <p>91k views</p>
-            </div>
-
-        </div> -->
-
-        <!-- Showing Data for Drawing tab/button -->
+        <!-- Section for displaying content when the Drawing tab/button is selected -->
         <section>
-            <div id="drawing-tab-showing">
+            <div id="drawing-tab-showing"> <!-- Container for content related to the Drawing tab -->
 
             </div>
         </section>
 
     </main>
 
-    <footer>
+    <footer> <!-- Defines the footer of the document -->
 
     </footer>
 
-
-    <script src="./js/tube.js"></script>
+    <script src="./js/tube.js"></script> <!-- Includes an external JavaScript file for the page's functionality -->
 </body>
 
 </html>

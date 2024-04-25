@@ -1,44 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Summary: This HTML document is structured to display a simple blog with questions and answers. It includes a header, main content area, and footer. The main content contains a list of questions and corresponding answers. The page is styled using DaisyUI and Tailwind CSS. -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Question Answers</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Root element of the HTML document and specifies the language as English -->
+
+<head> <!-- Contains meta information, title, and links to stylesheets and scripts -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to ensure the site is responsive -->
+    <title>Blog Question Answers</title> <!-- Title of the HTML document -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" /> <!-- Links to DaisyUI CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Includes Tailwind CSS for styling -->
 
 </head>
 
-<body>
-    <header>
+<body> <!-- Contains the content of the HTML document -->
+    <header> <!-- Section for introductory content or navigational links -->
 
     </header>
-    <main class="container mx-auto">
-        <div class="text-center">
-            <h2 class="font-semibold text-3xl">Blog Questions</h2>
-            <hr class="border-8 m-4">
-            <ol>
-                <li>1.Discuss the scope of var, let, and const</li>
-                <li>2.Tell us the use cases of null and undefined</li>
-                <li>3.What do you mean by REST API?</li>
+    <main class="container mx-auto"> <!-- Main content area of the document -->
+        <div class="text-center"> <!-- Div element centered text -->
+            <h2 class="font-semibold text-3xl">Blog Questions</h2> <!-- Heading for the blog questions -->
+            <hr class="border-8 m-4"> <!-- Horizontal rule with styling -->
+            <ol> <!-- Ordered list for questions -->
+                <li>1.Discuss the scope of var, let, and const</li> <!-- List item with question 1 -->
+                <li>2.Tell us the use cases of null and undefined</li> <!-- List item with question 2 -->
+                <li>3.What do you mean by REST API?</li> <!-- List item with question 3 -->
             </ol>
 
-            <hr class="border-spacing-4 m-4 border-4">
+            <hr class="border-spacing-4 m-4 border-4"> <!-- Horizontal rule with different styling -->
 
-            <p class="justify-center"> Q1.Ans <br>
+            <p class="justify-center"> Q1.Ans <br> <!-- Paragraph with centered text for answer 1 -->
                 var is a variable in Javascript which has a global scope.
                 where let and const is also variables in Javascript whose scope is block scope.
                 That means it can't be access outside of block of that variable.
             </p>
 
-            <p>
+            <p> <!-- Paragraph for answer 2 -->
                 Q2.Ans <br>
                 Okay!, null means it has empty value or blank value where undefined means it has no value
                 that means variable is declared but value isn't assigned.
 
             </p>
-            <p>
+            <p> <!-- Paragraph for answer 3 -->
                 Q3.Ans <br>
                 In general API is called REST API or RESTful API. REST=> represents Representational State Transfer.
                 I mean REST API is needed when client device request for data using API at that time server gives/transfer the data of current state in json form.
@@ -46,7 +48,7 @@
 
         </div>
     </main>
-    <footer>
+    <footer> <!-- Footer section of the document -->
 
     </footer>
 </body>
